@@ -1,0 +1,12 @@
+﻿@model List<TestWhatsEat.Models.DishViewModel>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<ul>
+    @foreach (var dish in Model)
+    {
+        <li>@dish.Name - @dish.Description</li>
+    }
+</ul>

@@ -1,0 +1,47 @@
+﻿@model DishViewModel
+<h1>Сделай блюдо да</h1>
+<div class="row">
+    <div class="col-6">
+
+        <div class="card">
+            <div class="card-header">
+                <h5>Новое блюдо</h5>
+            </div>
+
+            <div class="card-body">
+                <form asp-controller="Home" asp-action="CreateDish" method="post">
+                    <!-- Поле для ввода названия блюда-->
+                    <div class="mb-2">
+                        <label class="form-label">Название</label>
+                        <input asp-for=Name type="text" class="form-control" />
+                    </div>
+
+                    <!-- Поле для ввода короткого описания блюда-->
+                    <div class="mb-2">
+                        <label class="form-label">Короткое описание</label>
+                        <input asp-for=Description type="text" class="form-control" />
+                    </div>
+
+                    <!-- Поле для ввода страны происхождения блюда-->
+                    <div class="mb-2">
+                        <label class="form-label">Страна происхождения</label>
+                        <input asp-for=Country type="text" class="form-control" />
+                    </div>
+
+                    <!-- Поле для ввода сложности приготовления блюда-->
+                    <div class="mb-2">
+                        <label class="form-label">Сложность приготовления</label>
+                        <input asp-for=Difficulty type="text" class="form-control" />
+                    </div>
+
+                    <div class="mb-2">
+                        <button type="submit" class="btn-primary">Создать</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
